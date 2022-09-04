@@ -1,3 +1,5 @@
+# USER POOL
+
 variable "name" {
   description = "(Required) Name of the user pool."
   type        = string
@@ -18,7 +20,7 @@ variable "allow_admin_create_user_only" {
 variable "invite_message_email_message" {
   description = "(Optional) Message template for email messages. Must contain {username} and {####} placeholders, for username and temporary password, respectively."
   type        = string
-  default     = "OFF"
+  default     = null
 }
 
 variable "invite_message_email_subject" {
@@ -319,4 +321,12 @@ variable "verification_message_sms_message" {
   description = "(Optional) SMS message template. Must contain the {####} placeholder. Conflicts with sms_verification_message argument."
   type        = string
   default     = null
+}
+
+
+# GROUPS
+variable "groups" {
+  description = "(Optional) List of cognito user groups."
+  type        = map(map(string))
+  default     = {}
 }
