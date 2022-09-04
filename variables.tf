@@ -262,7 +262,7 @@ variable "software_token_mfa_configuration_enabled" {
 }
 
 variable "tags" {
-  description = " Map of tags to assign to the User Pool. If configured with a provider default_tags configuration block present, tags with matching keys will overwrite those defined at the provider-level."
+  description = "Map of tags to assign to the User Pool. If configured with a provider default_tags configuration block present, tags with matching keys will overwrite those defined at the provider-level."
   type        = map(string)
   default     = null
 }
