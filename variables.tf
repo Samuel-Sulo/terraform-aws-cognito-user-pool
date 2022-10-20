@@ -330,3 +330,11 @@ variable "groups" {
   type        = map(map(string))
   default     = {}
 }
+
+
+# RESOURCE SERVERS
+variable "resource_servers" {
+  description = "(Optional) List of cognito resource servers."
+  type        = any
+  default     = {}
+}
